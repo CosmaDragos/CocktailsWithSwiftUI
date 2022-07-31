@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Cocktail: Codable, Identifiable {
+struct Cocktail: Codable, Identifiable, Hashable {
     var id: String?
     let idDrink: String?
     var strDrink: String?

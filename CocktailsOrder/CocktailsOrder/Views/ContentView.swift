@@ -9,13 +9,16 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-       CocktailsList()
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-            .environmentObject(CocktailModelData())
+        TabView {
+            CocktailsList()
+                .tabItem {
+                    Label("MyBar", systemImage: "list.dash")
+                }
+            
+            CocktailsList()
+                .tabItem {
+                    Label("Discover", systemImage: "square.and.pencil")
+                }
+        }
     }
 }

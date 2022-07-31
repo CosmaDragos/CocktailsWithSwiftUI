@@ -13,22 +13,19 @@ struct CocktailCard: View {
     var body: some View {
         VStack {
             AsyncImage(url: URL(string: cocktail.strDrinkThumb ?? ""))
-            //            Image("cocktail_logo")
-            Spacer()
+                .frame(width: 180, height: 120)
+                .aspectRatio(contentMode: .fill)
             HStack {
-                
                 Text(cocktail.strDrink ?? "")
-                
                 Spacer()
-                
                 if cocktail.isAddedToMyList ?? false {
                     Image(systemName: "heart.fill")
-                    
+                } else {
+                    Image(systemName: "heart")
                 }
-                //            Image(systemName: "heart.fill")
             }
         }
-        .frame(width: 150, height: 150)
+        .frame(width: 180, height: 180)
         .cornerRadius(15)
     }
 }
