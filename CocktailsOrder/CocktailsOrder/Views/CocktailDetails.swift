@@ -1,13 +1,13 @@
 //
-//  CocktailCard.swift
+//  CocktailDetails.swift
 //  CocktailsOrder
 //
-//  Created by Cosma Dragos on 30.07.2022.
+//  Created by Cosma Dragos on 01.08.2022.
 //
 
 import SwiftUI
 
-struct CocktailCard: View {
+struct CocktailDetails: View {
     @State var cocktail: Cocktail
     @State var isLiked = false
     
@@ -15,12 +15,13 @@ struct CocktailCard: View {
         VStack {
             AsyncImage(url: URL(string: cocktail.strDrinkThumb ?? "")) { image in
                 image.resizable()
-                    .cornerRadius(15)
-                    .frame(width: 180, height: 120)
+                    .padding([.top, .leading, .trailing], 0)
+                    .ignoresSafeArea()
                     .aspectRatio(contentMode: .fill)
             } placeholder: {
                 Image("cocktail_logo")
             }
+            Spacer()
             HStack {
                 Text(cocktail.strDrink ?? "")
                 Spacer()
@@ -35,6 +36,14 @@ struct CocktailCard: View {
                     }
                 }
             }
+            VStack {
+                Text("Ingredients")
+                    .font(.title2)
+                Text(cocktail.strIngredient1 ?? "")
+                Text(cocktail.strIngredient2 ?? "")
+                Text(cocktail.strIngredient3 ?? "")
+            }
+           
         }
     }
 }

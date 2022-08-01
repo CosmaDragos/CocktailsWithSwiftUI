@@ -7,13 +7,17 @@
 
 import Foundation
 
-struct Cocktail: Codable, Identifiable, Hashable {
+class Cocktail: Codable, Identifiable {
     var id: String?
-    let idDrink: String?
     var strDrink: String?
     var strDrinkThumb: String?
     var strIngredient1: String?
     var strIngredient2: String?
     var strIngredient3: String?
     var isAddedToMyList: Bool? = false
+    
+    enum CodingKeys: String, CodingKey {
+        case id = "idDrink"
+        case strDrink, strDrinkThumb, strIngredient1, strIngredient2, strIngredient3
+    }
 }

@@ -17,8 +17,12 @@ struct CocktailsList: View {
         NavigationView {
             ScrollView {
                 LazyVGrid(columns: columns) {
-                    ForEach(searchResults, id: \.self) { cocktail in
-                        CocktailCard(cocktail: cocktail)
+                    ForEach(searchResults) { cocktail in
+                        NavigationLink {
+                            CocktailDetails(cocktail: cocktail)
+                        } label: {
+                            CocktailCard(cocktail: cocktail)
+                        }
                     }
                 }
                 .searchable(text: $searchText)
