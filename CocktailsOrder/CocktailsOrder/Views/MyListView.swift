@@ -37,10 +37,9 @@ struct MyListView: View {
                 }
             }
         }
-        .onAppear(perform: modelData.fetchCocktails)
     }
     
     var myListOfCocktails: [Cocktail] {
-        return modelData.cocktails.filter { $0.isAddedToMyList! }
+        return modelData.cocktails.filter { $0.isAddedToMyList }
     }
 }

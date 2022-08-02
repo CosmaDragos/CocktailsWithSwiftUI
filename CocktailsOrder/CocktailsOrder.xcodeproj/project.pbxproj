@@ -17,6 +17,7 @@
 		4080B4DF2895724600D6FDDB /* CocktailsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4080B4DE2895724600D6FDDB /* CocktailsList.swift */; };
 		4080B4E12895831B00D6FDDB /* CocktailsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4080B4E02895831B00D6FDDB /* CocktailsResponse.swift */; };
 		40B166582898039700D5DCFC /* MyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B166572898039700D5DCFC /* MyListView.swift */; };
+		40B1665B289929A400D5DCFC /* LikeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B1665A289929A400D5DCFC /* LikeButton.swift */; };
 		40C3D0F22897FF9400279C97 /* CocktailDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C3D0F12897FF9400279C97 /* CocktailDetails.swift */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +33,7 @@
 		4080B4DE2895724600D6FDDB /* CocktailsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailsList.swift; sourceTree = "<group>"; };
 		4080B4E02895831B00D6FDDB /* CocktailsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailsResponse.swift; sourceTree = "<group>"; };
 		40B166572898039700D5DCFC /* MyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListView.swift; sourceTree = "<group>"; };
+		40B1665A289929A400D5DCFC /* LikeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeButton.swift; sourceTree = "<group>"; };
 		40C3D0F12897FF9400279C97 /* CocktailDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailDetails.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				405DD66528872BB40009A77A /* CocktailsOrderApp.swift */,
+				40B166592899296500D5DCFC /* Helpers */,
 				4080B4DB28955F2900D6FDDB /* Views */,
 				4080B4D628915B8900D6FDDB /* Models */,
 				4080B4D528915B0700D6FDDB /* Networking */,
@@ -110,6 +113,14 @@
 				40B166572898039700D5DCFC /* MyListView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		40B166592899296500D5DCFC /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				40B1665A289929A400D5DCFC /* LikeButton.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,6 +201,7 @@
 				4080B4E12895831B00D6FDDB /* CocktailsResponse.swift in Sources */,
 				40B166582898039700D5DCFC /* MyListView.swift in Sources */,
 				4080B4DA28915EF500D6FDDB /* CocktailModelData.swift in Sources */,
+				40B1665B289929A400D5DCFC /* LikeButton.swift in Sources */,
 				4080B4DD28955FC300D6FDDB /* CocktailCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

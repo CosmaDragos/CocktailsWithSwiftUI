@@ -14,6 +14,10 @@ final class CocktailModelData: ObservableObject {
     
     private var bag = Set<AnyCancellable>()
 
+    init() {
+        self.fetchCocktails()
+    }
+    
     func fetchCocktails() {
         let cocktailsUrlString = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic"
         

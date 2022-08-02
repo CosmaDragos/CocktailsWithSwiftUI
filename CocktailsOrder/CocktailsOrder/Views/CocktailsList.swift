@@ -36,7 +36,6 @@ struct CocktailsList: View {
                 }
             }
         }
-        .onAppear(perform: modelData.fetchCocktails)
     }
     
     var searchResults: [Cocktail] {
@@ -46,4 +45,10 @@ struct CocktailsList: View {
             return modelData.cocktails.filter { $0.strDrink!.contains(searchText) }
         }
     }
+    
+//    var filteredCocktails: [Cocktail] {
+//        self.searchResults.filter { cocktail in
+//            cocktail.isAddedToMyList
+//        }
+//    }
 }

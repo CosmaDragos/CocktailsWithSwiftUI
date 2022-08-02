@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct CocktailCard: View {
-    @State var cocktail: Cocktail
-    @State var isLiked = false
+    var cocktail: Cocktail
     
     var body: some View {
         VStack {
@@ -23,16 +22,14 @@ struct CocktailCard: View {
             }
             HStack {
                 Text(cocktail.strDrink ?? "")
+                    .foregroundColor(.black)
                 Spacer()
-                Button {
-                    cocktail.isAddedToMyList?.toggle()
-                    self.isLiked.toggle()
-                } label: {
-                    if isLiked || cocktail.isAddedToMyList ?? false {
-                        Image(systemName: "heart.fill")
-                    } else {
-                        Image(systemName: "heart")
-                    }
+                if cocktail.isAddedToMyList {
+                    Image(systemName: "heart.fill")
+                        .foregroundColor(.black)
+                } else {
+                    Image(systemName: "heart")
+                        .foregroundColor(.black)
                 }
             }
         }

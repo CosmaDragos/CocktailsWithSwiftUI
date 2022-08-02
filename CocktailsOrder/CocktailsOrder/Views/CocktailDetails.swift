@@ -8,8 +8,12 @@
 import SwiftUI
 
 struct CocktailDetails: View {
-    @State var cocktail: Cocktail
-    @State var isLiked = false
+    @EnvironmentObject var modelData: CocktailModelData
+    var cocktail: Cocktail
+    
+    var cocktailIndex: Int {
+        modelData.cocktails.firstIndex(where: { $0.id == cocktail.id })!
+    }
     
     var body: some View {
         VStack {
@@ -25,23 +29,14 @@ struct CocktailDetails: View {
             HStack {
                 Text(cocktail.strDrink ?? "")
                 Spacer()
-                Button {
-                    cocktail.isAddedToMyList?.toggle()
-                    self.isLiked.toggle()
-                } label: {
-                    if isLiked || cocktail.isAddedToMyList ?? false {
-                        Image(systemName: "heart.fill")
-                    } else {
-                        Image(systemName: "heart")
-                    }
-                }
+                LikeButton(isSet: $modelData.cocktails[cocktailIndex].isAddedToMyList)
             }
             VStack {
                 Text("Ingredients")
                     .font(.title2)
-                Text(cocktail.strIngredient1 ?? "")
-                Text(cocktail.strIngredient2 ?? "")
-                Text(cocktail.strIngredient3 ?? "")
+                Text("-Incredient1")
+                Text("-Incredient2")
+                Text("-Incredient3")
             }
            
         }
