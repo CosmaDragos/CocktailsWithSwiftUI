@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		405CFED2289BB12C0059A74D /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405CFED1289BB12C0059A74D /* SplashScreen.swift */; };
 		405DD66628872BB40009A77A /* CocktailsOrderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405DD66528872BB40009A77A /* CocktailsOrderApp.swift */; };
 		405DD66828872BB40009A77A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405DD66728872BB40009A77A /* ContentView.swift */; };
 		405DD66A28872BB70009A77A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 405DD66928872BB70009A77A /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		405CFED1289BB12C0059A74D /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		405DD66228872BB40009A77A /* CocktailsOrder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocktailsOrder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		405DD66528872BB40009A77A /* CocktailsOrderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailsOrderApp.swift; sourceTree = "<group>"; };
 		405DD66728872BB40009A77A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				4080B4DE2895724600D6FDDB /* CocktailsList.swift */,
 				40C3D0F12897FF9400279C97 /* CocktailDetails.swift */,
 				40B166572898039700D5DCFC /* MyListView.swift */,
+				405CFED1289BB12C0059A74D /* SplashScreen.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 				4080B4D828915BBE00D6FDDB /* Cocktail.swift in Sources */,
 				4080B4DF2895724600D6FDDB /* CocktailsList.swift in Sources */,
 				4080B4E12895831B00D6FDDB /* CocktailsResponse.swift in Sources */,
+				405CFED2289BB12C0059A74D /* SplashScreen.swift in Sources */,
 				40B166582898039700D5DCFC /* MyListView.swift in Sources */,
 				4080B4DA28915EF500D6FDDB /* CocktailModelData.swift in Sources */,
 				40B1665B289929A400D5DCFC /* LikeButton.swift in Sources */,

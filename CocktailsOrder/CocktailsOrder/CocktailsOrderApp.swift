@@ -13,7 +13,7 @@ struct CocktailsOrderApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SplashScreen()
                 .environmentObject(modelData)
         }
     }

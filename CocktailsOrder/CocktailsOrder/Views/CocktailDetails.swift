@@ -25,20 +25,29 @@ struct CocktailDetails: View {
             } placeholder: {
                 Image("cocktail_logo")
             }
-            Spacer()
             HStack {
                 Text(cocktail.strDrink ?? "")
                 Spacer()
                 LikeButton(isSet: $modelData.cocktails[cocktailIndex].isAddedToMyList)
             }
-            VStack {
-                Text("Ingredients")
-                    .font(.title2)
-                Text("-Incredient1")
-                Text("-Incredient2")
-                Text("-Incredient3")
+            Text("Ingredients")
+                .font(.title2)
+            HStack {
+                Image(systemName: "star.fill")
+                    .foregroundColor(.yellow)
+                Text("Incredient1")
             }
-           
+            HStack {
+                Image(systemName: "star.fill")
+                    .foregroundColor(.yellow)
+                Text("Incredient2")
+            }
+            HStack {
+                Image(systemName: "star.fill")
+                    .foregroundColor(.yellow)
+                Text("Incredient3")
+            }
+            Spacer()
         }
     }
 }
