@@ -15,10 +15,12 @@ struct ContentView: View {
                     Label("MyBar", systemImage: "list.dash")
                 }
             
-            CocktailsList()
-                .tabItem {
-                    Label("Discover", systemImage: "square.and.pencil")
-                }
+            if let baseURL = "https://www.thecocktaildb.com", let cocktailsStore = CocktailsStore(cocktailsService: CocktailsService(baseURL: baseURL)) {
+                CocktailsList(store: cocktailsStore)
+                    .tabItem {
+                        Label("Discover", systemImage: "square.and.pencil")
+                    }
+            }
         }
     }
 }
