@@ -9,12 +9,12 @@ import SwiftUI
 
 @main
 struct CocktailsOrderApp: App {
-    @StateObject private var modelData = CocktailModelData()
+    @StateObject var cocktailVM = CocktailViewModel(cocktailsService: CocktailsService(baseURL: "https://www.thecocktaildb.com/api"))
     
     var body: some Scene {
         WindowGroup {
             SplashScreen()
-                .environmentObject(modelData)
+                .environmentObject(cocktailVM)
         }
     }
 }

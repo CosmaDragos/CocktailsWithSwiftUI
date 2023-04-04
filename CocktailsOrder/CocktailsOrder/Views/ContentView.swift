@@ -7,20 +7,17 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct ContentView: View {    
     var body: some View {
         TabView {
             MyListView()
                 .tabItem {
                     Label("MyBar", systemImage: "list.dash")
                 }
-            
-            if let baseURL = "https://www.thecocktaildb.com", let cocktailsStore = CocktailsStore(cocktailsService: CocktailsService(baseURL: baseURL)) {
-                CocktailsList(store: cocktailsStore)
-                    .tabItem {
-                        Label("Discover", systemImage: "square.and.pencil")
-                    }
-            }
+            CocktailsList()
+                .tabItem {
+                    Label("Discover", systemImage: "square.and.pencil")
+                }
         }
     }
 }

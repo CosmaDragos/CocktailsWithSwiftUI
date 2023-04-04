@@ -17,9 +17,9 @@ extension NetworkServiceable {
     /// Main function for calling an endpoint.
     /// - Parameter endpoint: Provided from a predefined API enumeration.
     /// - Returns: The decoded model or a custom error.
-    func call<T: Decodable>(endpoint: APICall) async -> Result<T, APIError> {
+    func call<T: Decodable>(endpoint: APICall) async throws -> T {
         guard let request = try? endpoint.urlRequest(baseURL: baseURL) else {
-            return .failure(.invalidURL)
+            throw APIError.invalidURL
         }
         do {
             let (data, response) = try await session.data(for: request)
@@ -31,12 +31,12 @@ extension NetworkServiceable {
             }
             do {
                 let decodedResponse = try JSONDecoder().decode(T.self, from: data)
-                return .success(decodedResponse)
+                return decodedResponse
             } catch let error {
-                return .failure(APIError.decode(error))
+                throw APIError.decode(error)
             }
         } catch let error {
-            return .failure(error as? APIError ?? .unknown)
+            throw error as? APIError ?? APIError.unknown
         }
     }
 }

@@ -8,20 +8,23 @@
 import SwiftUI
 
 struct MyListView: View {
-    @EnvironmentObject var modelData: CocktailModelData
+    @EnvironmentObject var cocktailViewModel: CocktailViewModel
     
     let columns = [GridItem(.flexible()), GridItem(.flexible())]
-    
+    var myCocktails: [Cocktail] {
+        cocktailViewModel.getMyCocktailsList()
+    }
+        
     var body: some View {
         NavigationView {
             VStack {
-                if myListOfCocktails.isEmpty {
+                if myCocktails.isEmpty {
                     Text("You don't have any cocktails in your list")
                         .font(.title2)
                 } else {
                     ScrollView {
                         LazyVGrid(columns: columns) {
-                            ForEach(myListOfCocktails) { cocktail in
+                            ForEach(myCocktails) { cocktail in
                                 CocktailCard(cocktail: cocktail)
                             }
                         }
@@ -37,9 +40,5 @@ struct MyListView: View {
                 }
             }
         }
-    }
-    
-    var myListOfCocktails: [Cocktail] {
-        return modelData.cocktails.filter { $0.isAddedToMyList }
     }
 }

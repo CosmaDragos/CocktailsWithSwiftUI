@@ -7,52 +7,8 @@
 
 import SwiftUI
 
-/// With current network layer
-//struct CocktailsList: View {
-//    @EnvironmentObject var modelData: CocktailModelData
-//    @State private var searchText = ""
-//
-//    let columns = [GridItem(.flexible()), GridItem(.flexible())]
-//
-//    var body: some View {
-//        NavigationView {
-//            ScrollView {
-//                LazyVGrid(columns: columns) {
-//                    ForEach(searchResults) { cocktail in
-//                        NavigationLink {
-//                            CocktailDetails(cocktail: cocktail)
-//                        } label: {
-//                            CocktailCard(cocktail: cocktail)
-//                        }
-//                    }
-//                }
-//                .searchable(text: $searchText)
-//                .padding()
-//            }
-//            .toolbar {
-//                ToolbarItem(placement: .principal) {
-//                    Image("cocktail_logo")
-//                        .resizable()
-//                        .frame(width: 40, height: 40)
-//                }
-//            }
-//        }
-//    }
-//
-//    var searchResults: [Cocktail] {
-//        if searchText.isEmpty {
-//            return modelData.cocktails
-//        } else {
-//            return modelData.cocktails.filter { $0.strDrink!.contains(searchText) }
-//        }
-//    }
-//}
-
-/// With new network layer
-struct CocktailsList<Store: CocktailsStoreable>: View {
-    @ObservedObject var store: Store
-    
-    @State private var searchText = ""
+struct CocktailsList: View {
+    @EnvironmentObject var cocktailVM: CocktailViewModel
     
     let columns = [GridItem(.flexible()), GridItem(.flexible())]
     
@@ -60,7 +16,7 @@ struct CocktailsList<Store: CocktailsStoreable>: View {
         NavigationView {
             ScrollView {
                 LazyVGrid(columns: columns) {
-                    ForEach(searchResults) { cocktail in
+                    ForEach(cocktailVM.searchResults) { cocktail in
                         NavigationLink {
                             CocktailDetails(cocktail: cocktail)
                         } label: {
@@ -68,14 +24,14 @@ struct CocktailsList<Store: CocktailsStoreable>: View {
                         }
                     }
                 }
-                .searchable(text: $searchText)
+                .searchable(text: $cocktailVM.searchText)
                 .padding()
             }
             .task {
-                await store.fetchCocktails()
+                await cocktailVM.fetchCocktails()
             }
-            .refreshable { [weak store] in
-                await store?.fetchCocktails()
+            .refreshable { [weak cocktailVM] in
+                await cocktailVM?.fetchCocktails()
             }
             .toolbar {
                 ToolbarItem(placement: .principal) {
@@ -84,14 +40,6 @@ struct CocktailsList<Store: CocktailsStoreable>: View {
                         .frame(width: 40, height: 40)
                 }
             }
-        }
-    }
-    
-    var searchResults: [Cocktail] {
-        if searchText.isEmpty {
-            return store.cocktails
-        } else {
-            return store.cocktails.filter { $0.strDrink!.contains(searchText) }
         }
     }
 }

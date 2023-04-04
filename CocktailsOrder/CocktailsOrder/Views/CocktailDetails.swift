@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct CocktailDetails: View {
-    @EnvironmentObject var modelData: CocktailModelData
+    @EnvironmentObject var cocktailViewModel: CocktailViewModel
     var cocktail: Cocktail
-    
+    @State private var isSet = false
     var cocktailIndex: Int {
-        modelData.cocktails.firstIndex(where: { $0.id == cocktail.id })!
+        cocktailViewModel.getCocktailId(cocktail: cocktail)
     }
     
     var body: some View {
@@ -28,7 +28,7 @@ struct CocktailDetails: View {
             HStack {
                 Text(cocktail.strDrink ?? "")
                 Spacer()
-                LikeButton(isSet: $modelData.cocktails[cocktailIndex].isAddedToMyList)
+                LikeButton(isSet: $isSet)
             }
             Text("Ingredients")
                 .font(.title2)
@@ -45,9 +45,13 @@ struct CocktailDetails: View {
             HStack {
                 Image(systemName: "star.fill")
                     .foregroundColor(.yellow)
+                    .onTapGesture {
+                        isSet = cocktailViewModel.addCocktailToMyList(cocktailIndex: cocktailIndex)
+                    }
                 Text("Incredient3")
             }
             Spacer()
         }
     }
 }
+

@@ -16,7 +16,7 @@ extension CocktailsService.API: APICall {
     var path: String {
         switch self {
         case .cocktails:
-            return "/api/json/v1/1/filter.php?a=Alcoholic"
+            return "/json/v1/1/filter.php?a=Alcoholic"
         }
     }
 }

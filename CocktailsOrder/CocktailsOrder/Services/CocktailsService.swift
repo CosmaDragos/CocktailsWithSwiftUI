@@ -8,7 +8,7 @@
 import Foundation
 
 protocol CocktailsServiceable: NetworkServiceable {
-    func fetchCocktails() async -> Result<[Cocktail], APIError>
+    func fetchCocktails() async throws -> [Cocktail]
 }
 
 // MARK: - Real Service
@@ -16,8 +16,8 @@ protocol CocktailsServiceable: NetworkServiceable {
 struct CocktailsService: CocktailsServiceable {
     let baseURL: String
 
-    func fetchCocktails() async -> Result<[Cocktail], APIError> {
-        await call(endpoint: API.cocktails)
+    func fetchCocktails() async throws -> [Cocktail] {
+        try await call(endpoint: API.cocktails)
     }
 }
 
@@ -25,7 +25,7 @@ struct CocktailsService: CocktailsServiceable {
 
 struct StubCocktailsService: CocktailsServiceable {
 
-    func fetchCocktails() async -> Result<[Cocktail], APIError> {
-        .success([])
+    func fetchCocktails() async throws -> [Cocktail] {
+       return []
     }
 }

@@ -7,17 +7,176 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D361E495-FE21-4A19-8E07-DAA2EB601F35"
+            uuid = "1209A526-BAD2-4186-A9DE-AA2EA0904CAB"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "CocktailsOrder/Views/CocktailDetails.swift"
+            filePath = "CocktailsOrder/ViewModels/CocktailViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
-            landmarkName = "body"
-            landmarkType = "24">
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "fetchCocktails()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3C6565BC-EFB2-4658-B4FD-1DAA4D5BFD7E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CocktailsOrder/ViewModels/CocktailViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "fetchCocktails()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3C6565BC-EFB2-4658-B4FD-1DAA4D5BFD7E - 209fba8d93a5af9e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for CocktailsOrder.CocktailViewModel.fetchCocktails() async -&gt; ()"
+                  moduleName = "CocktailsOrder"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cosmadragos/Documents/CocktailsSwiftUI/CocktailsOrder/CocktailsOrder/ViewModels/CocktailViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "77">
+               </Location>
+               <Location
+                  uuid = "3C6565BC-EFB2-4658-B4FD-1DAA4D5BFD7E - 7f01bfcc1dd33592"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for CocktailsOrder.CocktailViewModel.fetchCocktails() async -&gt; ()"
+                  moduleName = "CocktailsOrder"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cosmadragos/Documents/CocktailsSwiftUI/CocktailsOrder/CocktailsOrder/ViewModels/CocktailViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "3C6565BC-EFB2-4658-B4FD-1DAA4D5BFD7E - db1a7b2a202018f3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(6) suspend resume partial function for CocktailsOrder.CocktailViewModel.fetchCocktails() async -&gt; ()"
+                  moduleName = "CocktailsOrder"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cosmadragos/Documents/CocktailsSwiftUI/CocktailsOrder/CocktailsOrder/ViewModels/CocktailViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "119">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "82FAA4C6-9815-4500-A1E8-0993894E3686"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CocktailsOrder/Networking/NetworkingV2/NetworkServiceable.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "call(endpoint:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BA00C135-52AD-4941-B197-B0A82FEF53B1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CocktailsOrder/Networking/NetworkingV2/NetworkServiceable.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "call(endpoint:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B2ADD6B7-CB54-4184-A875-D2309EC8C43A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CocktailsOrder/Services/CocktailsService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "fetchCocktails()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B2ADD6B7-CB54-4184-A875-D2309EC8C43A - 381bcd51f75cde35"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CocktailsOrder.CocktailsService.fetchCocktails() async throws -&gt; Swift.Array&lt;CocktailsOrder.Cocktail&gt;"
+                  moduleName = "CocktailsOrder"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cosmadragos/Documents/CocktailsSwiftUI/CocktailsOrder/CocktailsOrder/Services/CocktailsService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "85">
+               </Location>
+               <Location
+                  uuid = "B2ADD6B7-CB54-4184-A875-D2309EC8C43A - c8bf43b892043b1d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for CocktailsOrder.CocktailsService.fetchCocktails() async throws -&gt; Swift.Array&lt;CocktailsOrder.Cocktail&gt;"
+                  moduleName = "CocktailsOrder"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cosmadragos/Documents/CocktailsSwiftUI/CocktailsOrder/CocktailsOrder/Services/CocktailsService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "60">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "02205860-C767-468B-8179-BBE573AB30A2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CocktailsOrder/Networking/NetworkingV2/NetworkServiceable.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "NetworkServiceable"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
