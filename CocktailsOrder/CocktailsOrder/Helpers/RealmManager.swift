@@ -55,6 +55,16 @@ class RealmManager: ObservableObject {
         }
     }
     
+    func searchCocktails(searchedText: String) -> [CocktailObject] {
+        getCocktails()
+        let allCocktails = cocktails
+        if searchedText.isEmpty {
+            return allCocktails
+        } else {
+            return allCocktails.filter {$0.strDrink?.contains(searchedText) ?? false}
+        }
+    }
+    
     func updateCocktail(id: ObjectId, isAddedToMyList: Bool) {
         if let localRealm = localRealm {
             do {

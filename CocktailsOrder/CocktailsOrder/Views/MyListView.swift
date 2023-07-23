@@ -14,6 +14,7 @@ struct MyListView: View {
     var myCocktails: [CocktailObject] {
         cocktailViewModel.getMyCocktailsList()
     }
+    @State private var reloadFlag = false
         
     var body: some View {
         NavigationView {
@@ -38,6 +39,9 @@ struct MyListView: View {
                         .resizable()
                         .frame(width: 40, height: 40)
                 }
+            }
+            .onAppear {
+                reloadFlag.toggle()
             }
         }
     }

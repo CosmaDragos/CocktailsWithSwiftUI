@@ -8,15 +8,11 @@
 import SwiftUI
 
 struct LikeButton: View {
-    @Binding var isSet: Bool
+    var isLiked: Bool
     
     var body: some View {
-        Button {
-            isSet.toggle()
-        } label: {
-            Label("Toggle Favorite", systemImage: isSet ? "heart.fill" : "heart")
-                .labelStyle(.iconOnly)
-                .foregroundColor(.black)
-        }
+        Image(systemName: isLiked ? "heart.fill" : "heart")
+            .labelStyle(.iconOnly)
+            .foregroundColor(.black)
     }
 }

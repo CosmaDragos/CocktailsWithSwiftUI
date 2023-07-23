@@ -17,14 +17,15 @@ final class CocktailViewModel: ObservableObject {
     
     // MARK: - Public Properties
     
-    private var cocktails: [Cocktail] = []
+    private var cocktails: [CocktailObject] = []
     
     // MARK: - Private Properties
     
     private let cocktailsService: CocktailsServiceable
     private var realmManager = RealmManager()
-
+    
     var searchText = ""
+    private var hasFetchedData = false // Add a flag to track if data has been fetched
     
     // MARK: - Lifecycle
     
@@ -35,40 +36,52 @@ final class CocktailViewModel: ObservableObject {
     // MARK: - API Calls
     
     func fetchCocktails() async {
-        do {
-            let cocktails = try await cocktailsService.fetchCocktails()
-            await MainActor.run {
-                self.cocktails = cocktails
-                for cocktail in cocktails {
-                    let cocktailObject = CocktailObject(cocktail: cocktail)
-                    self.realmManager.addCocktail(cocktail: cocktailObject)
+        if !hasFetchedData {
+            do {
+                let cocktails = try await cocktailsService.fetchCocktails()
+                await MainActor.run {
+                    for cocktail in cocktails {
+                        let cocktailObject = CocktailObject(cocktail: cocktail)
+                        self.realmManager.addCocktail(cocktail: cocktailObject)
+                    }
+                    self.cocktails = self.realmManager.cocktails
+                    self.state = cocktails.isEmpty ? .empty : .loaded
                 }
-                self.state = cocktails.isEmpty ? .empty : .loaded
+                hasFetchedData = true
+            } catch let error as APIError {
+                await MainActor.run {
+                    self.state = .failed(error)
+                }
+            } catch let error {
+                print(error.localizedDescription)
             }
-        } catch let error as APIError {
+        } else {
+            let cocktailObjects = self.realmManager.cocktails
             await MainActor.run {
-                self.state = .failed(error)
+                state = cocktailObjects.isEmpty ? .empty : .loaded
             }
-        } catch let error {
-            print(error.localizedDescription)
         }
     }
     
-    func addCocktailToMyList(cocktail: CocktailObject) {
-        self.realmManager.updateCocktail(id: cocktail.id, isAddedToMyList: cocktail.isAddedToMyList)
+    func updateCocktailToMyList(cocktail: CocktailObject) {
+        if let index = cocktails.firstIndex(where: { $0.id == cocktail.id }) {
+            cocktails[index].isAddedToMyList = cocktail.isAddedToMyList
+        }
+        self.realmManager.updateCocktail(id: cocktail.id, isAddedToMyList: !cocktail.isAddedToMyList)
     }
     
-    var searchResults: [CocktailObject] {
-        let allCocktailObjects = self.realmManager.cocktails
+    var filteredCocktails: [CocktailObject] {
         if searchText.isEmpty {
-            return allCocktailObjects
+            return cocktails
         } else {
-            return allCocktailObjects.filter { $0.strDrink!.contains(self.searchText) }.map(CocktailObject.init)
+            return cocktails.filter { $0.strDrink?.contains(searchText) ?? false}
         }
     }
     
     func getMyCocktailsList() -> [CocktailObject] {
-        let cocktails = self.realmManager.cocktails
-        return cocktails
+        let myCocktails = self.realmManager.cocktails.filter {
+            $0.isAddedToMyList == true
+        }
+        return myCocktails
     }
 }

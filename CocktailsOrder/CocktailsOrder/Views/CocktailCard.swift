@@ -8,7 +8,14 @@
 import SwiftUI
 
 struct CocktailCard: View {
+    @EnvironmentObject var cocktailVM: CocktailViewModel
+    @State private var isLiked: Bool
     var cocktail: CocktailObject
+    
+    init(cocktail: CocktailObject) {
+        self.cocktail = cocktail
+        _isLiked = State(initialValue: cocktail.isAddedToMyList)
+    }
     
     var body: some View {
         VStack {
@@ -24,13 +31,11 @@ struct CocktailCard: View {
                 Text(cocktail.strDrink ?? "")
                     .foregroundColor(.black)
                 Spacer()
-                if cocktail.isAddedToMyList {
-                    Image(systemName: "heart.fill")
-                        .foregroundColor(.black)
-                } else {
-                    Image(systemName: "heart")
-                        .foregroundColor(.black)
-                }
+                LikeButton(isLiked: isLiked) 
+                    .onTapGesture {
+                        cocktailVM.updateCocktailToMyList(cocktail: cocktail)
+                        isLiked.toggle()
+                    }
             }
         }
     }

@@ -17,4 +17,12 @@ class Cocktail: Codable, Identifiable {
         case id = "idDrink"
         case strDrink, strDrinkThumb
     }
+    
+    convenience init(cocktail: CocktailObject) {
+        self.init()
+        id = cocktail.strId
+        strDrink = cocktail.strDrink
+        strDrinkThumb = cocktail.strDrinkThumb
+        isAddedToMyList = cocktail.isAddedToMyList
+    }
 }

@@ -7,49 +7,33 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "E4AF0483-8DCD-42BA-BE0E-5368613002A7"
+            uuid = "F5008DB0-7BCA-4E53-9195-0BD9505CC7B3"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "CocktailsOrder/Networking/NetworkingV2/NetworkServiceable.swift"
+            filePath = "CocktailsOrder/Views/MyListView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
-            landmarkName = "call(endpoint:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "E4AF0483-8DCD-42BA-BE0E-5368613002A7 - 91cf384f4b13db68"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for CocktailsOrder.NetworkServiceable.call&lt;&#x3c4;_0_0 where &#x3c4;_1_0: Swift.Decodable&gt;(endpoint: CocktailsOrder.APICall) async throws -&gt; &#x3c4;_1_0"
-                  moduleName = "CocktailsOrder"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/cosmadragos/Documents/CocktailsSwiftUI/CocktailsOrder/CocktailsOrder/Networking/NetworkingV2/NetworkServiceable.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "34"
-                  endingLineNumber = "34"
-                  offsetFromSymbolStart = "2157">
-               </Location>
-               <Location
-                  uuid = "E4AF0483-8DCD-42BA-BE0E-5368613002A7 - 91cf384f4b13db68"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for CocktailsOrder.NetworkServiceable.call&lt;&#x3c4;_0_0 where &#x3c4;_1_0: Swift.Decodable&gt;(endpoint: CocktailsOrder.APICall) async throws -&gt; &#x3c4;_1_0"
-                  moduleName = "CocktailsOrder"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/cosmadragos/Documents/CocktailsSwiftUI/CocktailsOrder/CocktailsOrder/Networking/NetworkingV2/NetworkServiceable.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "34"
-                  endingLineNumber = "34"
-                  offsetFromSymbolStart = "2233">
-               </Location>
-            </Locations>
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "myCocktails"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6BDBE281-3887-41FF-897E-54B75394B3CA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CocktailsOrder/Views/MyListView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "body"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

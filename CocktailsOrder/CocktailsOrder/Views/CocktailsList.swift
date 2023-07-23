@@ -9,14 +9,13 @@ import SwiftUI
 
 struct CocktailsList: View {
     @EnvironmentObject var cocktailVM: CocktailViewModel
-    
     let columns = [GridItem(.flexible()), GridItem(.flexible())]
     
     var body: some View {
         NavigationView {
             ScrollView {
                 LazyVGrid(columns: columns) {
-                    ForEach(cocktailVM.searchResults) { cocktailObject in
+                    ForEach(cocktailVM.filteredCocktails) { cocktailObject in
                         NavigationLink {
                             CocktailDetails(cocktail: cocktailObject)
                         } label: {

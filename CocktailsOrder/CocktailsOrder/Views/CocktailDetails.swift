@@ -8,9 +8,14 @@
 import SwiftUI
 
 struct CocktailDetails: View {
-    @EnvironmentObject var cocktailViewModel: CocktailViewModel
+    @EnvironmentObject var cocktailVM: CocktailViewModel
     var cocktail: CocktailObject
-    @State private var isSet = false
+    @State private var isLiked: Bool
+
+    init(cocktail: CocktailObject) {
+        self.cocktail = cocktail
+        _isLiked = State(initialValue: cocktail.isAddedToMyList)
+    }
     
     var body: some View {
         VStack {
@@ -25,7 +30,11 @@ struct CocktailDetails: View {
             HStack {
                 Text(cocktail.strDrink ?? "")
                 Spacer()
-                LikeButton(isSet: $isSet)
+                LikeButton(isLiked: isLiked)
+                    .onTapGesture {
+                        cocktailVM.updateCocktailToMyList(cocktail: cocktail)
+                        isLiked.toggle()
+                    }
             }
             Text("Ingredients")
                 .font(.title2)
@@ -42,10 +51,6 @@ struct CocktailDetails: View {
             HStack {
                 Image(systemName: "star.fill")
                     .foregroundColor(.yellow)
-                    .onTapGesture {
-                        cocktailViewModel.addCocktailToMyList(cocktail: cocktail)
-                        isSet = true
-                    }
                 Text("Ingredient3")
             }
             Spacer()
