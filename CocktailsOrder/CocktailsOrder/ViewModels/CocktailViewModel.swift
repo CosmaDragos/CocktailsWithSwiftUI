@@ -17,7 +17,7 @@ final class CocktailViewModel: ObservableObject {
     
     // MARK: - Public Properties
     
-    private var cocktails: [CocktailObject] = []
+    var cocktails: [CocktailObject] = []
     
     // MARK: - Private Properties
     
@@ -45,7 +45,7 @@ final class CocktailViewModel: ObservableObject {
                         self.realmManager.addCocktail(cocktail: cocktailObject)
                     }
                     self.cocktails = self.realmManager.cocktails
-                    self.state = cocktails.isEmpty ? .empty : .loaded
+                    self.state = self.cocktails.isEmpty ? .empty : .loaded
                 }
                 hasFetchedData = true
             } catch let error as APIError {
@@ -57,16 +57,14 @@ final class CocktailViewModel: ObservableObject {
             }
         } else {
             let cocktailObjects = self.realmManager.cocktails
+            self.cocktails = cocktailObjects
             await MainActor.run {
-                state = cocktailObjects.isEmpty ? .empty : .loaded
+                state = self.cocktails.isEmpty ? .empty : .loaded
             }
         }
     }
     
     func updateCocktailToMyList(cocktail: CocktailObject) {
-        if let index = cocktails.firstIndex(where: { $0.id == cocktail.id }) {
-            cocktails[index].isAddedToMyList = cocktail.isAddedToMyList
-        }
         self.realmManager.updateCocktail(id: cocktail.id, isAddedToMyList: !cocktail.isAddedToMyList)
     }
     
