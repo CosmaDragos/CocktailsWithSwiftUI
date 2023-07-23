@@ -25,7 +25,7 @@ final class CocktailViewModel: ObservableObject {
     private var realmManager = RealmManager()
     
     var searchText = ""
-    private var hasFetchedData = false // Add a flag to track if data has been fetched
+    private var hasFetchedData = false
     
     // MARK: - Lifecycle
     
