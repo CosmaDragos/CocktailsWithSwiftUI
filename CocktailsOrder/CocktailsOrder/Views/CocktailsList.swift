@@ -16,11 +16,11 @@ struct CocktailsList: View {
         NavigationView {
             ScrollView {
                 LazyVGrid(columns: columns) {
-                    ForEach(cocktailVM.searchResults) { cocktail in
+                    ForEach(cocktailVM.searchResults) { cocktailObject in
                         NavigationLink {
-                            CocktailDetails(cocktail: cocktail)
+                            CocktailDetails(cocktail: cocktailObject)
                         } label: {
-                            CocktailCard(cocktail: cocktail)
+                            CocktailCard(cocktail: cocktailObject)
                         }
                     }
                 }

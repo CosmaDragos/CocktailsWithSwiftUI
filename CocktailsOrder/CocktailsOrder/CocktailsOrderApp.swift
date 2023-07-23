@@ -10,7 +10,7 @@ import SwiftUI
 @main
 struct CocktailsOrderApp: App {
     @StateObject var cocktailVM = CocktailViewModel(cocktailsService: CocktailsService(baseURL: "https://www.thecocktaildb.com/api"))
-    
+
     var body: some Scene {
         WindowGroup {
             SplashScreen()
@@ -18,3 +18,4 @@ struct CocktailsOrderApp: App {
         }
     }
 }
+

@@ -9,11 +9,8 @@ import SwiftUI
 
 struct CocktailDetails: View {
     @EnvironmentObject var cocktailViewModel: CocktailViewModel
-    var cocktail: Cocktail
+    var cocktail: CocktailObject
     @State private var isSet = false
-    var cocktailIndex: Int {
-        cocktailViewModel.getCocktailId(cocktail: cocktail)
-    }
     
     var body: some View {
         VStack {
@@ -35,23 +32,23 @@ struct CocktailDetails: View {
             HStack {
                 Image(systemName: "star.fill")
                     .foregroundColor(.yellow)
-                Text("Incredient1")
+                Text("Ingredient1")
             }
             HStack {
                 Image(systemName: "star.fill")
                     .foregroundColor(.yellow)
-                Text("Incredient2")
+                Text("Ingredient2")
             }
             HStack {
                 Image(systemName: "star.fill")
                     .foregroundColor(.yellow)
                     .onTapGesture {
-                        isSet = cocktailViewModel.addCocktailToMyList(cocktailIndex: cocktailIndex)
+                        cocktailViewModel.addCocktailToMyList(cocktail: cocktail)
+                        isSet = true
                     }
-                Text("Incredient3")
+                Text("Ingredient3")
             }
             Spacer()
         }
     }
 }
-

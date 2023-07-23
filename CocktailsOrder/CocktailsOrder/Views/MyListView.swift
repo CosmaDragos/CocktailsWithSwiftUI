@@ -11,7 +11,7 @@ struct MyListView: View {
     @EnvironmentObject var cocktailViewModel: CocktailViewModel
     
     let columns = [GridItem(.flexible()), GridItem(.flexible())]
-    var myCocktails: [Cocktail] {
+    var myCocktails: [CocktailObject] {
         cocktailViewModel.getMyCocktailsList()
     }
         

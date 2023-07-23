@@ -7,36 +7,43 @@
 
 import Combine
 import Foundation
+import RealmSwift
 
 final class CocktailViewModel: ObservableObject {
-
+    
     // MARK: - State Properties
-
+    
     @Published private(set) var state: ViewState = .empty
-
+    
     // MARK: - Public Properties
     
     private var cocktails: [Cocktail] = []
-
+    
     // MARK: - Private Properties
-
+    
     private let cocktailsService: CocktailsServiceable
+    private var realmManager = RealmManager()
+
     var searchText = ""
-
+    
     // MARK: - Lifecycle
-
+    
     init(cocktailsService: CocktailsServiceable) {
         self.cocktailsService = cocktailsService
     }
-
+    
     // MARK: - API Calls
     
     func fetchCocktails() async {
         do {
-            let _ = try await cocktailsService.fetchCocktails()
+            let cocktails = try await cocktailsService.fetchCocktails()
             await MainActor.run {
-                self.state = cocktails.isEmpty ? .empty : .loaded
                 self.cocktails = cocktails
+                for cocktail in cocktails {
+                    let cocktailObject = CocktailObject(cocktail: cocktail)
+                    self.realmManager.addCocktail(cocktail: cocktailObject)
+                }
+                self.state = cocktails.isEmpty ? .empty : .loaded
             }
         } catch let error as APIError {
             await MainActor.run {
@@ -45,26 +52,23 @@ final class CocktailViewModel: ObservableObject {
         } catch let error {
             print(error.localizedDescription)
         }
-        
     }
     
-    func getCocktailId(cocktail: Cocktail) -> Int {
-        cocktails.firstIndex(where: { $0.id == cocktail.id })!
+    func addCocktailToMyList(cocktail: CocktailObject) {
+        self.realmManager.updateCocktail(id: cocktail.id, isAddedToMyList: cocktail.isAddedToMyList)
     }
     
-    var searchResults: [Cocktail] {
+    var searchResults: [CocktailObject] {
+        let allCocktailObjects = self.realmManager.cocktails
         if searchText.isEmpty {
-            return cocktails
+            return allCocktailObjects
         } else {
-            return cocktails.filter { $0.strDrink!.contains(searchText) }
+            return allCocktailObjects.filter { $0.strDrink!.contains(self.searchText) }.map(CocktailObject.init)
         }
     }
     
-    func addCocktailToMyList(cocktailIndex: Int) -> Bool {
-        return self.cocktails[cocktailIndex].isAddedToMyList
-    }
-    
-    func getMyCocktailsList() -> [Cocktail] {
-        return cocktails.filter { $0.isAddedToMyList }
+    func getMyCocktailsList() -> [CocktailObject] {
+        let cocktails = self.realmManager.cocktails
+        return cocktails
     }
 }

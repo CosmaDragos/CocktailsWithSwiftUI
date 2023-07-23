@@ -23,18 +23,15 @@ extension NetworkServiceable {
         }
         do {
             let (data, response) = try await session.data(for: request)
+            print("Received data:", String(data: data, encoding: .utf8) ?? "Invalid data")
             guard let statusCode = (response as? HTTPURLResponse)?.statusCode else {
                 throw APIError.unexpectedResponse
             }
             guard 200 ..< 300 ~= statusCode else {
                 throw APIError.httpCode(statusCode)
             }
-            do {
-                let decodedResponse = try JSONDecoder().decode(T.self, from: data)
-                return decodedResponse
-            } catch let error {
-                throw APIError.decode(error)
-            }
+            let decodedResponse = try JSONDecoder().decode(CocktailsResponse.self, from: data)
+            return decodedResponse.drinks as! T
         } catch let error {
             throw error as? APIError ?? APIError.unknown
         }

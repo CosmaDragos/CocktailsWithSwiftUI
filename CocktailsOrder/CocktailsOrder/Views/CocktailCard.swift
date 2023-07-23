@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CocktailCard: View {
-    var cocktail: Cocktail
+    var cocktail: CocktailObject
     
     var body: some View {
         VStack {

@@ -16,6 +16,9 @@
 		4024F14B29C0D9A70067377C /* CocktailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4024F14A29C0D9A70067377C /* CocktailViewModel.swift */; };
 		4024F14D29C0DA580067377C /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4024F14C29C0DA580067377C /* ViewState.swift */; };
 		4024F14F29C0DAE00067377C /* ViewStateModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4024F14E29C0DAE00067377C /* ViewStateModifier.swift */; };
+		40548E3B2A6D3F5600FBB781 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40548E3A2A6D3F5600FBB781 /* RealmManager.swift */; };
+		40548E3E2A6D49C400FBB781 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 40548E3D2A6D49C400FBB781 /* Realm */; };
+		40548E402A6D49C400FBB781 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 40548E3F2A6D49C400FBB781 /* RealmSwift */; };
 		405CFED2289BB12C0059A74D /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405CFED1289BB12C0059A74D /* SplashScreen.swift */; };
 		405DD66628872BB40009A77A /* CocktailsOrderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405DD66528872BB40009A77A /* CocktailsOrderApp.swift */; };
 		405DD66828872BB40009A77A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405DD66728872BB40009A77A /* ContentView.swift */; };
@@ -29,6 +32,7 @@
 		40B166582898039700D5DCFC /* MyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B166572898039700D5DCFC /* MyListView.swift */; };
 		40B1665B289929A400D5DCFC /* LikeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40B1665A289929A400D5DCFC /* LikeButton.swift */; };
 		40C3D0F22897FF9400279C97 /* CocktailDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40C3D0F12897FF9400279C97 /* CocktailDetails.swift */; };
+		40D094422A6D17F5006F6467 /* CocktailObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D094412A6D17F5006F6467 /* CocktailObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +45,7 @@
 		4024F14A29C0D9A70067377C /* CocktailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailViewModel.swift; sourceTree = "<group>"; };
 		4024F14C29C0DA580067377C /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
 		4024F14E29C0DAE00067377C /* ViewStateModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStateModifier.swift; sourceTree = "<group>"; };
+		40548E3A2A6D3F5600FBB781 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		405CFED1289BB12C0059A74D /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		405DD66228872BB40009A77A /* CocktailsOrder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocktailsOrder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		405DD66528872BB40009A77A /* CocktailsOrderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailsOrderApp.swift; sourceTree = "<group>"; };
@@ -55,6 +60,7 @@
 		40B166572898039700D5DCFC /* MyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListView.swift; sourceTree = "<group>"; };
 		40B1665A289929A400D5DCFC /* LikeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeButton.swift; sourceTree = "<group>"; };
 		40C3D0F12897FF9400279C97 /* CocktailDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailDetails.swift; sourceTree = "<group>"; };
+		40D094412A6D17F5006F6467 /* CocktailObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40548E402A6D49C400FBB781 /* RealmSwift in Frameworks */,
+				40548E3E2A6D49C400FBB781 /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,6 +150,7 @@
 			children = (
 				4080B4D728915BBE00D6FDDB /* Cocktail.swift */,
 				4080B4E02895831B00D6FDDB /* CocktailsResponse.swift */,
+				40D094412A6D17F5006F6467 /* CocktailObject.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -173,6 +182,7 @@
 				40B1665A289929A400D5DCFC /* LikeButton.swift */,
 				4024F14C29C0DA580067377C /* ViewState.swift */,
 				4024F14E29C0DAE00067377C /* ViewStateModifier.swift */,
+				40548E3A2A6D3F5600FBB781 /* RealmManager.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -193,6 +203,10 @@
 			dependencies = (
 			);
 			name = CocktailsOrder;
+			packageProductDependencies = (
+				40548E3D2A6D49C400FBB781 /* Realm */,
+				40548E3F2A6D49C400FBB781 /* RealmSwift */,
+			);
 			productName = CocktailsOrder;
 			productReference = 405DD66228872BB40009A77A /* CocktailsOrder.app */;
 			productType = "com.apple.product-type.application";
@@ -221,6 +235,9 @@
 				Base,
 			);
 			mainGroup = 405DD65928872BB40009A77A;
+			packageReferences = (
+				40548E3C2A6D49C400FBB781 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+			);
 			productRefGroup = 405DD66328872BB40009A77A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -253,12 +270,14 @@
 				405DD66628872BB40009A77A /* CocktailsOrderApp.swift in Sources */,
 				4024F14629C0D7B30067377C /* CocktailsAPI.swift in Sources */,
 				4024F14B29C0D9A70067377C /* CocktailViewModel.swift in Sources */,
+				40D094422A6D17F5006F6467 /* CocktailObject.swift in Sources */,
 				4080B4D828915BBE00D6FDDB /* Cocktail.swift in Sources */,
 				4024F14329C0D6070067377C /* NetworkServiceable.swift in Sources */,
 				4024F14D29C0DA580067377C /* ViewState.swift in Sources */,
 				4080B4DF2895724600D6FDDB /* CocktailsList.swift in Sources */,
 				4080B4E12895831B00D6FDDB /* CocktailsResponse.swift in Sources */,
 				405CFED2289BB12C0059A74D /* SplashScreen.swift in Sources */,
+				40548E3B2A6D3F5600FBB781 /* RealmManager.swift in Sources */,
 				4024F14829C0D7C00067377C /* CocktailsService.swift in Sources */,
 				40B166582898039700D5DCFC /* MyListView.swift in Sources */,
 				4024F14129C0D5E20067377C /* APIMethod.swift in Sources */,
@@ -465,6 +484,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		40548E3C2A6D49C400FBB781 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.10.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		40548E3D2A6D49C400FBB781 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 40548E3C2A6D49C400FBB781 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = Realm;
+		};
+		40548E3F2A6D49C400FBB781 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 40548E3C2A6D49C400FBB781 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 405DD65A28872BB40009A77A /* Project object */;
 }
