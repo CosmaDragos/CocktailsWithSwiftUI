@@ -7,6 +7,7 @@
 
 import Combine
 import Foundation
+import SwiftUI
 import RealmSwift
 
 final class CocktailViewModel: ObservableObject {
@@ -14,6 +15,8 @@ final class CocktailViewModel: ObservableObject {
     // MARK: - State Properties
     
     @Published private(set) var state: ViewState = .empty
+    @Published var searchText = ""
+    @AppStorage("firstRun") var firstRun: Bool = false
     
     // MARK: - Public Properties
     
@@ -23,10 +26,7 @@ final class CocktailViewModel: ObservableObject {
     
     private let cocktailsService: CocktailsServiceable
     private var realmManager = RealmManager()
-    
-    var searchText = ""
-    private var hasFetchedData = false
-    
+        
     // MARK: - Lifecycle
     
     init(cocktailsService: CocktailsServiceable) {
@@ -36,7 +36,7 @@ final class CocktailViewModel: ObservableObject {
     // MARK: - API Calls
     
     func fetchCocktails() async {
-        if !hasFetchedData {
+        if !firstRun {
             do {
                 let cocktails = try await cocktailsService.fetchCocktails()
                 await MainActor.run {
@@ -46,8 +46,8 @@ final class CocktailViewModel: ObservableObject {
                     }
                     self.cocktails = self.realmManager.cocktails
                     self.state = self.cocktails.isEmpty ? .empty : .loaded
+                    firstRun = true
                 }
-                hasFetchedData = true
             } catch let error as APIError {
                 await MainActor.run {
                     self.state = .failed(error)
