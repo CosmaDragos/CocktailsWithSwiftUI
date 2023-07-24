@@ -30,12 +30,11 @@ struct CocktailDetails: View {
             HStack {
                 Text(cocktail.strDrink ?? "")
                 Spacer()
-                LikeButton(isLiked: cocktail.isAddedToMyList)
-//                    .onTapGesture {
-//                        cocktailVM.updateCocktailToMyList(cocktail: cocktail)
-//                        isLiked.toggle()
-//                    }
-    
+                LikeButton(isLiked: isLiked)
+                    .onTapGesture {
+                        isLiked.toggle()
+                        cocktailVM.updateCocktailToMyList(cocktail: cocktail)
+                    }
             }
             Text("Ingredients")
                 .font(.title2)

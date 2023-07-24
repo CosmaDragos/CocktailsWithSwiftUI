@@ -33,8 +33,8 @@ struct CocktailCard: View {
                 Spacer()
                 LikeButton(isLiked: isLiked)
                     .onTapGesture {
-                        cocktailVM.updateCocktailToMyList(cocktail: cocktail)
                         isLiked.toggle()
+                        cocktailVM.updateCocktailToMyList(cocktail: cocktail)
                     }
             }
         }
