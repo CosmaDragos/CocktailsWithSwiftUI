@@ -26,7 +26,7 @@ struct CocktailDetails: View {
                     .aspectRatio(contentMode: .fill)
             } placeholder: {
                 Image("cocktail_logo")
-            }
+            } 
             HStack {
                 Text(cocktail.strDrink ?? "")
                 Spacer()
