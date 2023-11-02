@@ -31,10 +31,10 @@ struct CocktailCard: View {
                 Text(cocktail.strDrink ?? "")
                     .foregroundColor(.black)
                 Spacer()
-                LikeButton(isLiked: isLiked) 
+                LikeButton(isLiked: isLiked)
                     .onTapGesture {
-                        cocktailVM.updateCocktailToMyList(cocktail: cocktail)
                         isLiked.toggle()
+                        cocktailVM.updateCocktailToMyList(cocktail: cocktail)
                     }
             }
         }

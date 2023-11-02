@@ -26,14 +26,14 @@ struct CocktailDetails: View {
                     .aspectRatio(contentMode: .fill)
             } placeholder: {
                 Image("cocktail_logo")
-            }
+            } 
             HStack {
                 Text(cocktail.strDrink ?? "")
                 Spacer()
                 LikeButton(isLiked: isLiked)
                     .onTapGesture {
-                        cocktailVM.updateCocktailToMyList(cocktail: cocktail)
                         isLiked.toggle()
+                        cocktailVM.updateCocktailToMyList(cocktail: cocktail)
                     }
             }
             Text("Ingredients")
