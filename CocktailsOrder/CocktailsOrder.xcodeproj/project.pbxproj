@@ -16,6 +16,8 @@
 		4024F14B29C0D9A70067377C /* CocktailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4024F14A29C0D9A70067377C /* CocktailViewModel.swift */; };
 		4024F14D29C0DA580067377C /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4024F14C29C0DA580067377C /* ViewState.swift */; };
 		4024F14F29C0DAE00067377C /* ViewStateModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4024F14E29C0DAE00067377C /* ViewStateModifier.swift */; };
+		405215D12B5158E100A21C4F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405215D02B5158E100A21C4F /* Extensions.swift */; };
+		405215D32B515BFB00A21C4F /* UIColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 405215D22B515BFB00A21C4F /* UIColors.swift */; };
 		40548E3B2A6D3F5600FBB781 /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40548E3A2A6D3F5600FBB781 /* RealmManager.swift */; };
 		40548E3E2A6D49C400FBB781 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 40548E3D2A6D49C400FBB781 /* Realm */; };
 		40548E402A6D49C400FBB781 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 40548E3F2A6D49C400FBB781 /* RealmSwift */; };
@@ -48,6 +50,8 @@
 		4024F14A29C0D9A70067377C /* CocktailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailViewModel.swift; sourceTree = "<group>"; };
 		4024F14C29C0DA580067377C /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
 		4024F14E29C0DAE00067377C /* ViewStateModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStateModifier.swift; sourceTree = "<group>"; };
+		405215D02B5158E100A21C4F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		405215D22B515BFB00A21C4F /* UIColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColors.swift; sourceTree = "<group>"; };
 		40548E3A2A6D3F5600FBB781 /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		405CFED1289BB12C0059A74D /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		405DD66228872BB40009A77A /* CocktailsOrder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CocktailsOrder.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -200,6 +204,8 @@
 				4024F14E29C0DAE00067377C /* ViewStateModifier.swift */,
 				40548E3A2A6D3F5600FBB781 /* RealmManager.swift */,
 				40AE45BB2B4BFF3F00E6247B /* Fonts.swift */,
+				405215D02B5158E100A21C4F /* Extensions.swift */,
+				405215D22B515BFB00A21C4F /* UIColors.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -298,10 +304,12 @@
 				405CFED2289BB12C0059A74D /* SplashScreen.swift in Sources */,
 				40548E3B2A6D3F5600FBB781 /* RealmManager.swift in Sources */,
 				4024F14829C0D7C00067377C /* CocktailsService.swift in Sources */,
+				405215D32B515BFB00A21C4F /* UIColors.swift in Sources */,
 				40AE45BC2B4BFF3F00E6247B /* Fonts.swift in Sources */,
 				40B166582898039700D5DCFC /* MyListView.swift in Sources */,
 				4024F14129C0D5E20067377C /* APIMethod.swift in Sources */,
 				4080B4DA28915EF500D6FDDB /* CocktailModelData.swift in Sources */,
+				405215D12B5158E100A21C4F /* Extensions.swift in Sources */,
 				40B1665B289929A400D5DCFC /* LikeButton.swift in Sources */,
 				4024F14F29C0DAE00067377C /* ViewStateModifier.swift in Sources */,
 				4080B4DD28955FC300D6FDDB /* CocktailCard.swift in Sources */,

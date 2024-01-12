@@ -21,11 +21,13 @@ struct TabBarButton: View {
                     .frame(width: geo.size.width / 2, height: 4)
                     .padding(.leading, geo.size.width / 4)
             }
+        
             VStack (alignment: .center, spacing: 4) {
                 Image(systemName: imageName)
                     .resizable()
                     .scaledToFit()
                     .frame(width: 24, height: 24)
+                
                 Text(buttonText)
                     .font(.system(size: 10))
             }

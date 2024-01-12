@@ -116,8 +116,8 @@
             filePath = "CocktailsOrder/Views/CocktailDetails.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
             landmarkName = "body"
             landmarkType = "24">
          </BreakpointContent>
@@ -139,15 +139,63 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "5B47D3B6-36A0-42F7-9239-0C3FDF088FCD"
+            uuid = "2AC12114-D9C8-428B-9401-1323E534FE10"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "CocktailsOrder/Views/CocktailsList.swift"
+            filePath = "CocktailsOrder/Custom Tab Bar/CustomTabBar.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "2AC12114-D9C8-428B-9401-1323E534FE10 - 7091c76be0095182"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.tint(Swift.Optional&lt;SwiftUI.Color&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.tint(Swift.Optional&lt;SwiftUI.Color&gt;) -&gt; some&gt;&gt;.0)&gt; in CocktailsOrder.CustomTabBar.body.getter : some"
+                  moduleName = "CocktailsOrder"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cosmadragos/Documents/CocktailsSwiftUI/CocktailsOrder/CocktailsOrder/Custom%20Tab%20Bar/CustomTabBar.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  uuid = "2AC12114-D9C8-428B-9401-1323E534FE10 - 7091c76be0095182"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.tint(Swift.Optional&lt;SwiftUI.Color&gt;) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.tint(Swift.Optional&lt;SwiftUI.Color&gt;) -&gt; some&gt;&gt;.0)&gt; in CocktailsOrder.CustomTabBar.body.getter : some"
+                  moduleName = "CocktailsOrder"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cosmadragos/Documents/CocktailsSwiftUI/CocktailsOrder/CocktailsOrder/Custom%20Tab%20Bar/CustomTabBar.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "40">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "89A9BDB3-9923-4EDD-B11C-7C635093EB1E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CocktailsOrder/Custom Tab Bar/CustomTabBar.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
             landmarkName = "body"
             landmarkType = "24">
          </BreakpointContent>
@@ -155,49 +203,17 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "1F15FAA2-7BA9-4DD9-A30B-EAC4461A3034"
+            uuid = "27ACF5F0-452D-440F-B2FD-40509207B53B"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "CocktailsOrder/Views/CocktailsList.swift"
+            filePath = "CocktailsOrder/Custom Tab Bar/CustomTabBar.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
-            landmarkName = "body"
-            landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "1F15FAA2-7BA9-4DD9-A30B-EAC4461A3034 - 6523c8604ee2b2f3"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; SwiftUI.ForEach&lt;Swift.Array&lt;CocktailsOrder.CocktailObject&gt;, RealmSwift.ObjectId, SwiftUI.NavigationLink&lt;CocktailsOrder.CocktailCard, CocktailsOrder.CocktailDetails&gt;&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.toolbar&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.ToolbarContent&gt;(content: () -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0 in CocktailsOrder.CocktailsList.body.getter : some"
-                  moduleName = "CocktailsOrder"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/cosmadragos/Documents/CocktailsSwiftUI/CocktailsOrder/CocktailsOrder/Views/CocktailsList.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "18"
-                  endingLineNumber = "18"
-                  offsetFromSymbolStart = "198">
-               </Location>
-               <Location
-                  uuid = "1F15FAA2-7BA9-4DD9-A30B-EAC4461A3034 - c863e8163dc66d37"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (CocktailsOrder.CocktailObject) -&gt; SwiftUI.NavigationLink&lt;CocktailsOrder.CocktailCard, CocktailsOrder.CocktailDetails&gt; in closure #1 () -&gt; SwiftUI.ForEach&lt;Swift.Array&lt;CocktailsOrder.CocktailObject&gt;, RealmSwift.ObjectId, SwiftUI.NavigationLink&lt;CocktailsOrder.CocktailCard, CocktailsOrder.CocktailDetails&gt;&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.toolbar&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.ToolbarContent&gt;(content: () -&gt; &#x3c4;_1_0) -&gt; some&gt;&gt;.0 in CocktailsOrder.CocktailsList.body.getter : some"
-                  moduleName = "CocktailsOrder"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/cosmadragos/Documents/CocktailsSwiftUI/CocktailsOrder/CocktailsOrder/Views/CocktailsList.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "19"
-                  endingLineNumber = "19"
-                  offsetFromSymbolStart = "172">
-               </Location>
-            </Locations>
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "choseColor()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
