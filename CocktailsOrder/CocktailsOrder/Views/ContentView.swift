@@ -7,17 +7,20 @@
 
 import SwiftUI
 
-struct ContentView: View {    
+struct ContentView: View {   
+    
+    @State var selectedTab: Tabs = .myBar
+    
     var body: some View {
-        TabView {
-            MyListView()
-                .tabItem {
-                    Label("MyBar", systemImage: "list.dash")
-                }
-            CocktailsList()
-                .tabItem {
-                    Label("Discover", systemImage: "square.and.pencil")
-                }
+        VStack {
+            Spacer()
+            switch selectedTab {
+            case .myBar:
+                MyListView()
+            case .discover:
+                CocktailsList()
+            }
+            CustomTabBar(selectedTab: $selectedTab)
         }
     }
 }

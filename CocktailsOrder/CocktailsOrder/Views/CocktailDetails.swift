@@ -19,14 +19,9 @@ struct CocktailDetails: View {
     
     var body: some View {
         VStack {
-            AsyncImage(url: URL(string: cocktail.strDrinkThumb ?? "")) { image in
-                image.resizable()
-                    .padding([.top, .leading, .trailing], 0)
-                    .ignoresSafeArea()
-                    .aspectRatio(contentMode: .fill)
-            } placeholder: {
-                Image("cocktail_logo")
-            } 
+            
+            self.cocktailImage
+            
             HStack {
                 Text(cocktail.strDrink ?? "")
                 Spacer()
@@ -36,24 +31,45 @@ struct CocktailDetails: View {
                         cocktailVM.updateCocktailToMyList(cocktail: cocktail)
                     }
             }
+            
             Text("Ingredients")
                 .font(.title2)
+            
             HStack {
                 Image(systemName: "star.fill")
                     .foregroundColor(.yellow)
+                
                 Text("Ingredient1")
             }
+            
             HStack {
                 Image(systemName: "star.fill")
                     .foregroundColor(.yellow)
+                
                 Text("Ingredient2")
             }
+            
             HStack {
                 Image(systemName: "star.fill")
                     .foregroundColor(.yellow)
+                
                 Text("Ingredient3")
             }
             Spacer()
+        }
+    }
+}
+
+extension CocktailDetails {
+    @ViewBuilder
+    var cocktailImage: some View {
+        AsyncImage(url: URL(string: cocktail.strDrinkThumb ?? "")) { image in
+            image.resizable()
+                .padding([.top, .leading, .trailing], 0)
+                .ignoresSafeArea()
+                .aspectRatio(contentMode: .fill)
+        } placeholder: {
+            Image("cocktail_logo")
         }
     }
 }
