@@ -38,12 +38,12 @@ struct CustomTabBar: View {
             .tint(discoverButtonColor)
         }
         .frame(height: 82)
-        // TODO: check why the cornerRadius is not working anymore
-        .cornerRadius(30, corners: [.topLeft, .topRight])
-        .background(Color.lightGray
-            .shadow(color: Color.black, radius: 10, x: 0, y: 0)
-            .mask(Rectangle().padding(.top, -20))
-        )
+        .background(Color.lightGray)
+                      .cornerRadius(20)
+                      .padding(.top, 32)
+                      .shadow(color: Color.blue, radius: 20)
+                      .clipShape(TopRoundedCornersShape(radius: 20))
+                      .mask(Rectangle().padding(.top, -20))
     }
     
     private func choseColor() {

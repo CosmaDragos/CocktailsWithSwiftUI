@@ -36,6 +36,6 @@ struct TabBarButton: View {
     }
 }
 
-#Preview {
-    TabBarButton(buttonText: "MyBar", imageName: "list.dash", isActive: true)
-}
+//#Preview {
+//    TabBarButton(buttonText: "MyBar", imageName: "list.dash", isActive: true)
+//}
